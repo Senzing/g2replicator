@@ -2,6 +2,9 @@
 
 ** UNDER CONSTRUCTION **
 
+creates a datamart of the EDA reports in real time
+
+
 [G2Replicator.py](G2Replicator.py) Core replicator code (not customizable)
 [MyReplicator.py](MyReplicator.py) Customizable replicator functions (inherits thje core replicator)
 [g2mart-schema-sqlite-create.sql.py](g2mart-schema-sqlite-create.sql.py) schema
