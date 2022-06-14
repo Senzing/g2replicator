@@ -1,5 +1,9 @@
 # g2replicator
 
+## :no_entry: Deprecated
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 ** UNDER CONSTRUCTION **
 
 creates a datamart of the EDA reports in real time
@@ -22,7 +26,7 @@ mapped project dir as volume in ...
     senzing-stream-producer.sh
     senzing-stream-loader.sh
 --volume ${SENZING_PROJECT_DIR}:/project \
-        
+
 
 added parameters to ./senzing-stream-producer.sh and passed them in as environment variables
 
@@ -36,11 +40,11 @@ added parameters to ./senzing-stream-producer.sh and passed them in as environme
 
         --env SENZING_DEFAULT_DATA_SOURCE=${SENZING_DEFAULT_DATA_SOURCE} \
         --env SENZING_INPUT_URL=${SENZING_INPUT_URL} \
-  
+
 
     ./senzing-stream-producer.sh up /project/data/customer.json CUSTOMER
 
-            fix=SENZING_SUBCOMMAND=csv-to-rabbitmq 
+            fix=SENZING_SUBCOMMAND=csv-to-rabbitmq
 
 --------------------------------------
 
@@ -52,13 +56,13 @@ step 0 - start rabbitmq
 
 step 1 - purge database in G2Command
 
-    ./senzing-console.sh 
+    ./senzing-console.sh
 
 step 2 - bounce stream loader
 
     ./senzing-stream-loader.sh restart
 
-step 3 - send in some data through stream producer 
+step 3 - send in some data through stream producer
 
     ./senzing-stream-producer.sh up /project/data/customer.json CUSTOMER
 
